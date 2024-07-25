@@ -1,6 +1,172 @@
+################**********************************************#####################
+################*********************************************######################
+#Comparing using Asymptotic relative efficiency(ARE)
+# ARE for right tailed test only
+#ARE for Wald's test
+arewtr<-function(n,m,p1){
+  z1h0<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=0.5)
+    phath0<-sum(x)/length(x)
+    z1h0[i]<-(phath0-0.5)/sqrt((0.5*0.5)/n)
+  }
+  z1h0<-sort(z1h0)
+  for(i in 1:length(z1h0)){
+    if((sum(z1h0>=z1h0[i])/length(z1h0))<=0.05){
+      c<-z1h0[i]
+      break
+    }
+    # else{
+    #   i=i+1
+    # }
+  }
+  z1h1<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=p1)
+    phath1<-sum(x)/length(x)
+    z1h1[i]<-(phath1-0.5)/sqrt((0.5*0.5)/n)
+  }
+  pow<-sum(z1h1>=c)/m
+  return(pow)
+}
+#ARE for VST
+arevstr<-function(n,m,p1){
+  z2h0<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=0.5)
+    phath0<-sum(x)/length(x)
+    z2h0[i]<-2*sqrt(n)*(asin(sqrt(phath0))-asin(sqrt(0.5)))
+  }
+  z2h0<-sort(z2h0)
+  for(i in 1:length(z2h0)){
+    if((sum(z2h0>=z2h0[i])/length(z2h0))<=0.05){
+      c<-z2h0[i]
+      break
+    }
+    # else{
+    #   i=i+1
+    # }
+  }
+  z2h1<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=p1)
+    phath1<-sum(x)/length(x)
+    z2h1[i]<-2*sqrt(n)*(asin(sqrt(phath1))-asin(sqrt(0.5)))
+  }
+  pow<-sum(z2h1>=c)/m
+  return(pow)
+}
+#ARE for VST modified
+arevstmr<-function(n,m,p1){
+  z3h0<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=0.5)
+    phath0<-(sum(x)+(3/8))/(length(x)+(3/4))
+    z3h0[i]<-sqrt(4*n+2)*(asin(sqrt(phath0))-asin(sqrt(0.5)))
+  }
+  z3h0<-sort(z3h0)
+  for(i in 1:length(z3h0)){
+    if((sum(z3h0>=z3h0[i])/length(z3h0))<=0.05){
+      c<-z3h0[i]
+      break
+    }
+    # else{
+    #   i=i+1
+    # }
+  }
+  z3h1<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=p1)
+    phath1<-(sum(x)+(3/8))/(length(x)+(3/4))
+    z3h1[i]<-sqrt(4*n+2)*(asin(sqrt(phath1))-asin(sqrt(0.5)))
+  }
+  pow<-sum(z3h1>=c)/m
+  return(pow)
+}
 
+# ARE for left tailed test only
+# ARE for Wald's test
+arewtl<-function(n,m,p1){
+  z1h0<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=0.5)
+    phath0<-sum(x)/length(x)
+    z1h0[i]<-(phath0-0.5)/sqrt((0.5*0.5)/n)
+  }
+  z1h0<-sort(z1h0,decreasing=TRUE)
+  for(i in 1:length(z1h0)){
+    if((sum(z1h0<=z1h0[i])/length(z1h0))<=0.05){
+      c<-z1h0[i]
+      break
+    }
+    # else{
+    #   i=i+1
+    # }
+  }
+  z1h1<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=p1)
+    phath1<-sum(x)/length(x)
+    z1h1[i]<-(phath1-0.5)/sqrt((0.5*0.5)/n)
+  }
+  pow<-sum(z1h1<=c)/m
+  return(pow)
+}
 
-
+#ARE for VST
+arevstl<-function(n,m,p1){
+  z2h0<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=0.5)
+    phath0<-sum(x)/length(x)
+    z2h0[i]<-2*sqrt(n)*(asin(sqrt(phath0))-asin(sqrt(0.5)))
+  }
+  z2h0<-sort(z2h0,decreasing=TRUE)
+  for(i in 1:length(z2h0)){
+    if((sum(z2h0<=z2h0[i])/length(z2h0))<=0.05){
+      c<-z2h0[i]
+      break
+    }
+    # else{
+    #   i=i+1
+    # }
+  }
+  z2h1<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=p1)
+    phath1<-sum(x)/length(x)
+    z2h1[i]<-2*sqrt(n)*(asin(sqrt(phath1))-asin(sqrt(0.5)))
+  }
+  pow<-sum(z2h1<=c)/m
+  return(pow)
+}
+#ARE for VST modified
+arevstml<-function(n,m,p1){
+  z3h0<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=0.5)
+    phath0<-(sum(x)+(3/8))/(length(x)+(3/4))
+    z3h0[i]<-sqrt(4*n+2)*(asin(sqrt(phath0))-asin(sqrt(0.5)))
+  }
+  z3h0<-sort(z3h0,decreasing = TRUE)
+  for(i in 1:length(z3h0)){
+    if((sum(z3h0<=z3h0[i])/length(z3h0))<=0.05){
+      c<-z3h0[i]
+      break
+    }
+    # else{
+    #   i=i+1
+    # }
+  }
+  z3h1<-c()
+  for(i in 1:m){
+    x<-rbinom(n,size=1,prob=p1)
+    phath1<-(sum(x)+(3/8))/(length(x)+(3/4))
+    z3h1[i]<-sqrt(4*n+2)*(asin(sqrt(phath1))-asin(sqrt(0.5)))
+  }
+  pow<-sum(z3h1<=c)/m
+  return(pow)
+}
 ####### ARE COMPARISON #########
 ############ FOR TEST BASED ON GENERAL THOERY ###############
 #### For left tailed test ########
@@ -61,8 +227,6 @@ arewtr(12,5000,0.92)
 arewtr(11,5000,0.94)
 arewtr(10,5000,0.96)
 arewtr(8,5000,0.98)
-
-
 ############## FOR TEST BASED ON VST ################
 #### For left tailed test ########
 ###################
