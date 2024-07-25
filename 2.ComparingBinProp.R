@@ -1,6 +1,9 @@
 library("tidyverse")
 library(ggplot2)
 library(ggthemes)
+#************************************************************************************************************************
+                                        # Data frame & Graph related code after here 
+#************************************************************************************************************************
 #For left tail test
 #Difference of power for Wald's test and VST
 powerl_wt_vst_m5n10<-powerl_wt_m5n10-powerl_vst_m5n10
@@ -107,3 +110,4 @@ ggplot(dfr_diff_wt_vstm,aes(x=prightdiff,y=powerr_diff))+
   geom_hline(yintercept = 0)+
   xlab("Values of p under alternative")+
   ylab("Difference")
+#***************************************************************************************************************
