@@ -1,0 +1,13 @@
+*** DETAILS ***
+
+In this section, our aim is to compare the three testing methods for the single sample test of Population proportion.
+We are comparing the test statistic from mainly two perspectives : 
+1. Power Comparison
+2. Comparison using ARE (Asymptotic Relative Efficiency)
+
+*****************************************************************************************
+Below, we are giving the file names in this branch and the contents within it beside 
+*****************************************************************************************
+1. binprop.R : This file contains all the codes of power comparison.
+
+
