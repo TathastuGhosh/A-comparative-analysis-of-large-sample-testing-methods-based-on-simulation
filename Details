@@ -8,11 +8,13 @@ We are comparing the test statistic from mainly two perspectives :
 ****************************************************************************************************
 Below, we are giving the file names in this branch and also writing the contents within it beside.
 ****************************************************************************************************
-1.Power_BinProp.R : This file contains all the codes of power comparison.
-2.Comparing_BinProp.R : The power curves obtained from the previous file are not easily interpretable. That's why, in this file we have considered 
-another graphical representation so that we can compare the three testing methods.
-3.ARE_BinProp.R : This file contains all the codes of functions for finding the ARE of the concerned testing methods.
-4.Consistent_BinProp.R : In this file, the three testing methods are compared from the perspective of "Consistency".
-5.Convergence_BinProp.R : This file contains the codes related to "Convergence" of the test statistic of the three testing methods to normality and also the visulization using QQ plot.
+1.Power_BinProp.R       : This file contains all the codes of power comparison.
+2.Comparing_BinProp.R   : The power curves obtained from the previous file are not easily interpretable. 
+                          That's why, in this file we have considered another graphical representation so 
+                          that we can compare the three testing methods.
+3.ARE_BinProp.R         : This file contains all the codes of functions for finding the ARE of the concerned testing methods.
+4.Consistent_BinProp.R  : In this file, the three testing methods are compared from the perspective of "Consistency".
+5.Convergence_BinProp.R : This file contains the codes related to "Convergence" of the test statistic of the three 
+                          testing methods to normality and also the visulization using QQ plot.
 
 
