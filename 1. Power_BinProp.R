@@ -6,7 +6,6 @@ pl<-seq(0,0.5,length.out=102)
 pl<-pl[-c(1,102)]
 pl
 pl[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerfuncl_wt<-function(p,n,m){
   pow_wt_lt<-c()
   for(i in 1:length(p)){
@@ -38,13 +37,11 @@ powerfuncr_wt<-function(p,n,m){
   }
   return(pow_wt_rt)
 }
-
 # VST TEST
 #Left tailed test
 pl<-seq(0,0.5,length.out=102)
 pl<-pl[-c(1,102)]
 pl
-
 powerfuncl_vst<-function(p,n,m){
   pow_vst_lt<-c()
   for(i in 1:length(p)){
@@ -62,7 +59,6 @@ powerfuncl_vst<-function(p,n,m){
 pr<-seq(0.5,1,length.out=102)
 pr<-pr[-c(1,102)]
 pr
-
 powerfuncr_vst<-function(p,n,m){
   pow_vst_rt<-c()
   for(i in 1:length(p)){
@@ -78,11 +74,9 @@ powerfuncr_vst<-function(p,n,m){
 }
 # VST modified TEST
 #Left tailed test
-
 pl<-seq(0,0.5,length.out=102)
 pl<-pl[-c(1,102)]
 pl
-
 powerfuncl_vstm<-function(p,n,m){
   pow_vstm_lt<-c()
   for(i in 1:length(p)){
@@ -100,7 +94,6 @@ powerfuncl_vstm<-function(p,n,m){
 pr<-seq(0.5,1,length.out=102)
 pr<-pr[-c(1,102)]
 pr
-
 powerfuncr_vstm<-function(p,n,m){
   pow_vstm_rt<-c()
   for(i in 1:length(p)){
@@ -118,86 +111,53 @@ powerfuncr_vstm<-function(p,n,m){
 # LEFT SIDED TEST POWER
 powerl_wt_m5n10<-powerfuncl_wt(pl,n=10,m=5000)
 powerl_wt_m5n10[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_wt_m5n30<-powerfuncl_wt(pl,n=30,m=5000)
 powerl_wt_m5n30[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_wt_m5n50<-powerfuncl_wt(pl,n=50,m=5000)
 powerl_wt_m5n50[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_wt_m5n100<-powerfuncl_wt(pl,n=100,m=5000)
 powerl_wt_m5n100[c(1,12,23,34,45,56,67,78,89,100)]
-
-
 powerl_vst_m5n10<-powerfuncl_vst(pl,n=10,m=5000)
 powerl_vst_m5n10[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_vst_m5n30<-powerfuncl_vst(pl,n=30,m=5000)
 powerl_vst_m5n30[c(1,12,23,34,45,56,67,78,89,100)]
-
-
 powerl_vst_m5n50<-powerfuncl_vst(pl,n=50,m=5000)
 powerl_vst_m5n50[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_vst_m5n100<-powerfuncl_vst(pl,n=100,m=5000)
 powerl_vst_m5n100[c(1,12,23,34,45,56,67,78,89,100)]
-
-
-
 powerl_vstm_m5n10<-powerfuncl_vstm(pl,n=10,m=5000)
 powerl_vstm_m5n10[c(1,12,23,34,45,56,67,78,89,100)]
 powerl_vstm_m5n30<-powerfuncl_vstm(pl,n=30,m=5000)
 powerl_vstm_m5n30[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_vstm_m5n50<-powerfuncl_vstm(pl,n=50,m=5000)
 powerl_vstm_m5n50[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerl_vstm_m5n100<-powerfuncl_vstm(pl,n=100,m=5000)
 powerl_vstm_m5n100[c(1,12,23,34,45,56,67,78,89,100)]
-
-
-
 # RIGHT SIDED TEST POWER
-
 powerr_wt_m5n10<-powerfuncr_wt(pr,n=10,m=5000)
 powerr_wt_m5n10[c(1,12,23,34,45,56,67,78,89,100)]
 powerr_wt_m5n30<-powerfuncr_wt(pr,n=30,m=5000)
 powerr_wt_m5n30[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerr_wt_m5n50<-powerfuncr_wt(pr,n=50,m=5000)
 powerr_wt_m5n50[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerr_wt_m5n100<-powerfuncr_wt(pr,n=100,m=5000)
 powerr_wt_m5n100[c(1,12,23,34,45,56,67,78,89,100)]
-
-
-
 powerr_vst_m5n10<-powerfuncr_vst(pr,n=10,m=5000)
 powerr_vst_m5n10[c(1,12,23,34,45,56,67,78,89,100)]
-
-
 powerr_vst_m5n30<-powerfuncr_vst(pr,n=30,m=5000)
 powerr_vst_m5n30[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerr_vst_m5n50<-powerfuncr_vst(pr,n=50,m=5000)
 powerr_vst_m5n50[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerr_vst_m5n100<-powerfuncr_vst(pr,n=100,m=5000)
 powerr_vst_m5n100[c(1,12,23,34,45,56,67,78,89,100)]
-
-
 powerr_vstm_m5n10<-powerfuncr_vstm(pr,n=10,m=5000)
 powerr_vstm_m5n10[c(1,12,23,34,45,56,67,78,89,100)]
 powerr_vstm_m5n30<-powerfuncr_vstm(pr,n=30,m=5000)
 powerr_vstm_m5n30[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerr_vstm_m5n50<-powerfuncr_vstm(pr,n=50,m=5000)
 powerr_vstm_m5n50[c(1,12,23,34,45,56,67,78,89,100)]
-
 powerr_vstm_m5n100<-powerfuncr_vstm(pr,n=100,m=5000)
 powerr_vstm_m5n100[c(1,12,23,34,45,56,67,78,89,100)]
-
-
 #df for left tail
 library(tidyverse)
 pleft<-c(pl,pl,pl)
@@ -208,7 +168,6 @@ n_hunl<-c(powerl_wt_m5n100,powerl_vst_m5n100,powerl_vstm_m5n100)
 Testtype<-c(rep("General theory",100),rep("VST",100),rep("VSTm",100))
 dfl<-data.frame(pleft,n_1l,n_3l,n_5l,n_hunl,Testtype)
 view(dfl)
-
 #combined plot left sided
 library(ggplot2)
 library(tidyverse)
@@ -265,10 +224,7 @@ ggplot(dfl,aes(pleft,n_1l))+
     ylab("Power")+
     labs(color="Test type")+
     theme(legend.position="top")
-  
-
 #df for right tail 
-
 pright<-c(pr,pr,pr)
 n_1r<-c(powerr_wt_m5n10,powerr_vst_m5n10,powerr_vstm_m5n10)
 n_3r<-c(powerr_wt_m5n30,powerr_vst_m5n30,powerr_vstm_m5n30)
@@ -277,7 +233,6 @@ n_hunr<-c(powerr_wt_m5n100,powerr_vst_m5n100,powerr_vstm_m5n100)
 Testtype<-c(rep("General theory",100),rep("VST",100),rep("VSTm",100))
 dfr<-data.frame(pright,n_1r,n_3r,n_5r,n_hunr,Testtype)
 view(dfr)
-
 # combined plot right sided
 library("ggplot2")
 library("tidyverse")
@@ -329,29 +284,6 @@ ggplot(dfr,aes(pright,n_hunr))+
   labs(color="Test type")+
   theme(legend.position="top")
 
-
-#checking how many powers are greater or equal to
-
-# sum(powerl_vst_m5n10>=powerl_wt_m5n10)
-# sum(powerl_vst_m5n30>=powerl_wt_m5n30)
-# sum(powerl_vst_m5n50>=powerl_wt_m5n50)
-# sum(powerl_vst_m5n100>=powerl_wt_m5n100)
-# 
-# sum(powerr_vst_m5n10>=powerr_wt_m5n10)
-# sum(powerr_vst_m5n30>=powerr_wt_m5n30)
-# sum(powerr_vst_m5n50>=powerr_wt_m5n50)
-# sum(powerr_vst_m5n100>=powerr_wt_m5n100)
-
-
-# sum(powerl_wt_m5n10==powerl_vst_m5n10)
-# sum(powerl_wt_m5n30==powerl_vst_m5n30)
-# sum(powerl_wt_m5n50==powerl_vst_m5n50)
-# sum(powerl_wt_m5n100==powerl_vst_m5n100)
-
-# sum(powerr_wt_m5n10==powerr_vst_m5n10)
-# sum(powerr_wt_m5n30==powerr_vst_m5n30)
-# sum(powerr_wt_m5n50==powerr_vst_m5n50)
-# sum(powerr_wt_m5n100==powerr_vst_m5n100)
 
 
 ################**********************************************#####################
