@@ -8,6 +8,7 @@ We are comparing the test statistic from mainly two perspectives :
 *****************************************************************************************
 Below, we are giving the file names in this branch and the contents within it beside 
 *****************************************************************************************
-1. binprop.R : This file contains all the codes of power comparison.
+1. Power_Binprop.R : This file contains all the codes of power comparison.
+2. 
 
 
