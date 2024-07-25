@@ -1,3 +1,6 @@
+
+
+
 ####### ARE COMPARISON #########
 ############ FOR TEST BASED ON GENERAL THOERY ###############
 #### For left tailed test ########
