@@ -1,9 +1,6 @@
 # Convergence of test statistic for Bin Prop #
-
 # For wald test
-
 # Left tail
-
 powerfuncl_wt_con<-function(p,n,m){
     ts_lt<-c()
     for(j in 1:m){
@@ -13,7 +10,6 @@ powerfuncl_wt_con<-function(p,n,m){
     }
   return(ts_lt)
 }
-
 # Right tail
 powerfuncr_wt_con<-function(p,n,m){
     ts_rt<-c()
@@ -24,12 +20,8 @@ powerfuncr_wt_con<-function(p,n,m){
     }
   return(ts_rt)
 }
-
-
 # For VST 
-
 # Left tail
-
 powerfuncl_vst_con<-function(p,n,m){
     ts_lt<-c()
     for(j in 1:m){
@@ -39,10 +31,7 @@ powerfuncl_vst_con<-function(p,n,m){
     }
   return(ts_lt)
 }
-
-
 # Right tail 
-
 powerfuncr_vst_con<-function(p,n,m){
     ts_rt<-c()
     for(j in 1:m){
@@ -52,12 +41,8 @@ powerfuncr_vst_con<-function(p,n,m){
     }
   return(ts_rt)
 }
-
-
 # For VST Modified
-
 # Left tail 
-
 powerfuncl_vstm_con<-function(p,n,m){
     ts_lt<-c()
     for(j in 1:m){
@@ -67,9 +52,7 @@ powerfuncl_vstm_con<-function(p,n,m){
     }
   return(ts_lt)
 }
-
 # Right tail
-
 powerfuncr_vstm_con<-function(p,n,m){
     ts_rt<-c()
     for(j in 1:m){
@@ -79,49 +62,6 @@ powerfuncr_vstm_con<-function(p,n,m){
     }
   return(ts_rt)
 }
-
-
-
-# Checking for wald test
-
-# For left tailed test
-# Alternative : 0.05,0.10,0.25,0.40,0.45
-
-
-
-# conl_wt<-function(p){
-#   x<-c(rep(0,100000))
-#   for(i in 1:length(x)){
-#     n=1
-#     z<-shapiro.test((powerfuncl_wt_con(p,n,m=5000)))$p.value
-#     if(z<0.05){
-#       x[i]=z
-#       n=n+1
-#     }
-#     else{
-#       x[i]=z
-#       break
-#     }
-#   }
-#   return(n)
-# }
-
-
-# check<-function(n,p,t){
-#   z<-c()
-#   for(i in 1:t){
-#     u<-shapiro.test(powerfuncl_wt_con(p,n,5000))$p.value
-#     if(u<0.05){
-#       z[i]<-0 # reject
-#     }
-#     else{
-#       z[i]<-1 #accept
-#     }
-#     v<-sum(z)/t
-#   }
-#   return(v)
-# }
-
 #Wald n values
 shapiro.test(powerfuncl_wt_con(p=0.05,n=7300,m=5000))
 shapiro.test(powerfuncl_wt_con(p=0.10,n=3400,m=5000))
@@ -167,8 +107,6 @@ shapiro.test(powerfuncr_vstm_con(p=0.90,n=2880,m=5000))
 shapiro.test(powerfuncr_vstm_con(p=0.95,n=5750,m=5000))
 
 
-
-
 library(tidyverse)
 library(ggthemes)
 df1<-data.frame(z=c(scale(powerfuncl_wt_con(p=0.10,n=3400,m=5000)),scale(powerfuncl_vst_con(p=0.10,n=3130,m=5000)),
@@ -187,8 +125,6 @@ ggplot(df1,aes(sample=z,colour=factor(testtype)))+
     axis.title.x = element_text(size=11, face="bold"),
     axis.title.y = element_text(size=11, face="bold")
   )
-
-
 
 df2<-data.frame(z=c(scale(powerfuncl_wt_con(p=0.40,n=1432,m=5000)),scale(powerfuncl_vst_con(p=0.40,n=1130,m=5000)),
                     scale(powerfuncl_vstm_con(p=0.40,n=1090,m=5000))),testtype=c(rep("general theory",5000),rep("VST",5000),rep("Modified VST",5000)))
@@ -240,14 +176,6 @@ ggplot(df4,aes(sample=z,colour=factor(testtype)))+
     axis.title.x = element_text(size=11, face="bold"),
     axis.title.y = element_text(size=11, face="bold")
   )
-
-
-
-
-
-
-
-
 
 
 
