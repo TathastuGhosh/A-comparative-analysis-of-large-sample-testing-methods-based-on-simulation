@@ -209,6 +209,9 @@ cons_p_df<-data.frame(testmethod,tail,altval,nn,cons)
 view(cons_p_df)
 library(ggthemes)
 
+#************************************************************************************************************************
+                                        # Data frame & Graph related code after here 
+#************************************************************************************************************************
 
 # FOR LEFT TAIL TESTS
 cons_p_df%>%
