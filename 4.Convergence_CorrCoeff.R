@@ -118,7 +118,9 @@ shapiro.test(powerfuncr_r_vstm_con(p=0.50,n=21,m=5000))
 shapiro.test(powerfuncr_r_vstm_con(p=0.20,n=17,m=5000))
 shapiro.test(powerfuncr_r_vstm_con(p=0.10,n=16,m=5000))
 
-
+#************************************************************************************************************************
+                                        # Data frame & Graph related code after here 
+#************************************************************************************************************************
 
 df1<-data.frame(z=c(scale(powerfuncl_r_wt_con(p=-0.20,n=790,m=5000)),scale(powerfuncl_r_vst_con(p=-0.20,n=18,m=5000)),
                     scale(powerfuncl_r_vstm_con(p=-0.20,n=17,m=5000))),testtype=c(rep("general theory",5000),rep("VST",5000),rep("Modified VST",5000)))
@@ -188,3 +190,4 @@ ggplot(df4,aes(sample=z,colour=factor(testtype)))+
     axis.title.x = element_text(size=11, face="bold"),
     axis.title.y = element_text(size=11, face="bold")
   )
+#***********************************************************************************************************************
