@@ -24,11 +24,33 @@ Understanding the PNG files
 [ Here, we have considered four values of sample sizes (n) viz. 10,30,50 and 100.
 "m" denotes the simulation number which is fixed at 5000 throughout the project. ]
 
+
+*********** Images for Power comparisons ***********
+## Images whose name starts from Image1 to Image10 denotes the "Power curves". ##
 Here are total of 10 images. Image number is given in the first portion of the name of the respective image.
 
 Note : Image 1 and Image 2 gives the combined power curves for all n=10,30,50 and 100. 
        After that till Image 10, there are power curves seperately for each n.
 
-- After "Image No." , there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
+- After "Image No.", there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
 - After there is written "m5" which denotes the simulation number which is fixed at 5000.
 - At last "nk" is written which indicates "k" is the number of samples taken where, k=10,30,50 and 100.
+
+*********** Images for another graphical representation ************
+## Images whose name starts from Image11 to Image16 denotes the "difference of power curves".
+- After "Image No.", there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
+- After that, "diff" is written which identifies that this is a plot related to difference of powers.
+- After that, there is written "GtVst" or "VstVstm" or "GtVstm" which indicates the following : 
+  a. GtVst   : It indicates that we have plotted the difference of powers from "test based on General theory" and "test based on VST".
+  b. VstVstm : It indicates that we have plotted the difference of powers from "test based on VST" and "test based on modified VST".
+  c. GtVstm  : It indicates that we have plotted the difference of powers from "test based on General theory" and "test based on modified VST".
+- 
+
+
+
+
+
+
+
+
+
