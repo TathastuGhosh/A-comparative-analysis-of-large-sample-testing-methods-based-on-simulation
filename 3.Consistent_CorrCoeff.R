@@ -1,6 +1,3 @@
-library(MASS)
-library(tidyverse)
-library(ggplot2)
 gt_lt_r_cons<-c(
   powerfuncl_r_wt(-0.10,10,5000),
   powerfuncl_r_wt(-0.10,30,5000),
@@ -226,9 +223,6 @@ cons_r_df%>%
   theme(legend.key = element_rect(fill = "white", colour = "black"))+
   theme(legend.title = element_text(face = "bold"))
 
-
-
-
 cons_r_df%>%
   filter(testmethod=="VST" & tail=="left tail")%>%
   ggplot(aes(nn,cons,colour=altval))+
@@ -243,7 +237,6 @@ cons_r_df%>%
   theme(legend.position ="top")+
   theme(legend.key = element_rect(fill = "white", colour = "black"))+
   theme(legend.title = element_text(face = "bold"))
-
 
 cons_r_df%>%
   filter(testmethod=="modified VST" & tail=="left tail")%>%
@@ -261,7 +254,6 @@ cons_r_df%>%
   theme(legend.title = element_text(face = "bold"))
 
 # FOR RIGHT TAIL TEST
-
 cons_r_df%>%
   filter(testmethod=="General theory" & tail=="right tail")%>%
   ggplot(aes(nn,cons,colour=altval))+
@@ -280,28 +272,6 @@ cons_r_df%>%
   theme(legend.key = element_rect(fill = "white", colour = "black"))+
   theme(legend.title = element_text(face = "bold"))
 
-
-# ##########tweaking################3
-# cons_r_df%>%
-#   filter(altval=="0.8" & tail=="right tail")%>%
-#   ggplot(aes(nn,cons,colour=testmethod))+
-#   geom_line(size=0.75)+
-#   geom_point(shape=19,size=2)+
-#   scale_color_manual(values=c("#FF6E40","#9080FF","#FFBB00","#1955AD","#1E847F"))+
-#   labs(col="Alternative:")+
-#   theme_bw()+
-#   xlab("Sample sizes")+
-#   ylab("Power")+
-#   theme(
-#     axis.title.x = element_text(size=11, face="bold"),
-#     axis.title.y = element_text(size=11, face="bold")
-#   )+
-#   theme(legend.position ="top")+
-#   theme(legend.key = element_rect(fill = "white", colour = "black"))+
-#   theme(legend.title = element_text(face = "bold"))
-# #################################
-
-
 cons_r_df%>%
   filter(testmethod=="VST" & tail=="right tail")%>%
   ggplot(aes(nn,cons,colour=altval))+
@@ -317,7 +287,6 @@ cons_r_df%>%
   theme(legend.key = element_rect(fill = "white", colour = "black"))+
   theme(legend.title = element_text(face = "bold"))
 
-
 cons_r_df%>%
   filter(testmethod=="modified VST" & tail=="right tail")%>%
   ggplot(aes(nn,cons,colour=altval))+
@@ -332,6 +301,3 @@ cons_r_df%>%
   theme(legend.position ="top")+
   theme(legend.key = element_rect(fill = "white", colour = "black"))+
   theme(legend.title = element_text(face = "bold"))
-
-
-
