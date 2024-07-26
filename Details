@@ -1,0 +1,34 @@
+*** DETAILS ***
+
+In this section, our aim is to compare the three testing methods for the single sample test of Population proportion.
+We are comparing the test statistic from mainly two perspectives : 
+1. Power Comparison
+2. Comparison using ARE (Asymptotic Relative Efficiency)
+
+****************************************************************************************************
+Below, we are giving the file names in this branch and also writing the contents within it beside.
+****************************************************************************************************
+1.Power_BinProp.R       : This file contains all the codes of power comparison.
+2.Comparing_BinProp.R   : The power curves obtained from the previous file are not easily interpretable. 
+                          That's why, in this file we have considered another graphical representation so 
+                          that we can compare the three testing methods.
+3.ARE_BinProp.R         : This file contains all the codes of functions for finding the ARE of the concerned testing methods.
+4.Consistent_BinProp.R  : In this file, the three testing methods are compared from the perspective of "Consistency".
+5.Convergence_BinProp.R : This file contains the codes related to "Convergence" of the test statistic of the three 
+                          testing methods to normality and also the visulization using QQ plot.
+
+
+****************************************************************************************************
+Understanding the PNG files
+****************************************************************************************************
+[ Here, we have considered four values of sample sizes (n) viz. 10,30,50 and 100.
+"m" denotes the simulation number which is fixed at 5000 throughout the project. ]
+
+Here are total of 10 images. Image number is given in the first portion of the name of the respective image.
+
+Note : Image 1 and Image 2 gives the combined power curves for all n=10,30,50 and 100. 
+       After that till Image 10, there are power curves seperately for each n.
+
+- After "Image No." , there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
+- After there is written "m5" which denotes the simulation number which is fixed at 5000.
+- At last "nk" is written which indicates "k" is the number of samples taken where, k=10,30,50 and 100.
