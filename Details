@@ -40,6 +40,7 @@ Note : Image 1 and Image 2 gives the combined power curves for all n=10,30,50 an
        After that till Image 10, there are power curves seperately for each n.
 
 - After "Image No.", there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
+- Then a "r" is written which indicates that this image is rlated to correlation coefficient.
 - After there is written "m5" which denotes the simulation number which is fixed at 5000.
 - At last "nk" is written which indicates "k" is the number of samples taken where, k=10,30,50 and 100.
 
