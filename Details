@@ -44,9 +44,12 @@ Note : Image 1 and Image 2 gives the combined power curves for all n=10,30,50 an
   a. GtVst   : It indicates that we have plotted the difference of powers from "test based on General theory" and "test based on VST".
   b. VstVstm : It indicates that we have plotted the difference of powers from "test based on VST" and "test based on modified VST".
   c. GtVstm  : It indicates that we have plotted the difference of powers from "test based on General theory" and "test based on modified VST".
-- 
 
-
+*********** Images related to Consistency ************
+## Images whose name starts from Image17 to Image22 are in this section.
+- After "Image No.", there is written "Cons" which denotes that the image is related to consistency of the test.
+- Then, there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
+- After that, there is written "Gt","Vst" and "Vstm" which carry their usual meaning as stated above.
 
 
 
