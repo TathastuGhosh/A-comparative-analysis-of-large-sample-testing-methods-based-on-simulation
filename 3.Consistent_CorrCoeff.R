@@ -199,7 +199,9 @@ altval<-as.character(c
                        (rep(0.10,5),rep(0.20,5),rep(0.50,5),rep(0.80,5),rep(0.90,5),
                          rep(0.10,5),rep(0.20,5),rep(0.50,5),rep(0.80,5),rep(0.90,5),
                          rep(0.10,5),rep(0.20,5),rep(0.50,5),rep(0.80,5),rep(0.90,5))))
-
+#************************************************************************************************************************
+                                        # Data frame & Graph related code after here 
+#************************************************************************************************************************
 cons<-c(gt_lt_r_cons,vst_lt_r_cons,vstm_lt_r_cons,gt_rt_r_cons,vst_rt_r_cons,vstm_rt_r_cons)
 cons_r_df<-data.frame(testmethod,tail,altval,nn,cons)
 view(cons_r_df)
@@ -301,3 +303,4 @@ cons_r_df%>%
   theme(legend.position ="top")+
   theme(legend.key = element_rect(fill = "white", colour = "black"))+
   theme(legend.title = element_text(face = "bold"))
+#*************************************************************************************************************
