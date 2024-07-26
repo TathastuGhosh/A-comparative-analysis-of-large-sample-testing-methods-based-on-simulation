@@ -21,8 +21,11 @@ Below, we are giving the file names in this branch and also writing the contents
 ****************************************************************************************************
 Understanding the PNG files
 ****************************************************************************************************
+
 [ Here, we have considered four values of sample sizes (n) viz. 10,30,50 and 100.
 "m" denotes the simulation number which is fixed at 5000 throughout the project. ]
+
+
 
 
 
@@ -61,7 +64,9 @@ Note : Image 1 and Image 2 gives the combined power curves for all n=10,30,50 an
 ************ Images related to Convergence of test statistics **************
 Here we have shown the QQ plot of all the three testing methods for the alternative 0.10,0.40,0.60 and 0.90.
 ## Images whose name starts from Images23 to Images26 are in this part.
-
+- After "Image No.", there is written "QQ" which indicates that a QQ plot is present there.
+- Then, there is written "Left" or "Right" which indicates the power curves are obtained from left or right tailed test.
+- After that, there is written the value under the alternative.
 
 
 
