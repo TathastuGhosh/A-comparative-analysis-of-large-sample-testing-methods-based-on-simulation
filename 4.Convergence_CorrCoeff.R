@@ -1,11 +1,6 @@
 # Convergence of test statistic for Bin Prop #
-
-library(MASS)
-
 # For wald test
-
 # Left tail
-
 powerfuncl_r_wt_con<-function(p,n,m){
     ts_lt<-c()
     for(j in 1:m){
@@ -17,9 +12,7 @@ powerfuncl_r_wt_con<-function(p,n,m){
     }
   return(ts_lt)
 }
-
 # Right tail
-
 powerfuncr_r_wt_con<-function(p,n,m){
     ts_rt<-c()
     for(j in 1:m){
@@ -31,12 +24,8 @@ powerfuncr_r_wt_con<-function(p,n,m){
     }
   return(ts_rt)
 }
-
-
 # For VST test
-
 # Left tail
-
 powerfuncl_r_vst_con<-function(p,n,m){
     ts_lt<-c()
     for(j in 1:m){
@@ -48,9 +37,7 @@ powerfuncl_r_vst_con<-function(p,n,m){
     }
   return(ts_lt)
 }
-
 # Right tail
-
 powerfuncr_r_vst_con<-function(p,n,m){
     ts_rt<-c()
     for(j in 1:m){
@@ -62,12 +49,8 @@ powerfuncr_r_vst_con<-function(p,n,m){
     }
   return(ts_rt)
 }
-
-
 # For VsT modified
-
 # Left tail
-
 powerfuncl_r_vstm_con<-function(p,n,m){
     ts_lt<-c()
     for(j in 1:m){
@@ -79,10 +62,7 @@ powerfuncl_r_vstm_con<-function(p,n,m){
     }
   return(ts_lt)
 }
-
-
 # Right tail
-
 powerfuncr_r_vstm_con<-function(p,n,m){
     ts_rt<-c()
     for(j in 1:m){
@@ -94,8 +74,6 @@ powerfuncr_r_vstm_con<-function(p,n,m){
     }
   return(ts_rt)
 }
-
-
 #Wald test
 shapiro.test(powerfuncl_r_wt_con(p=-0.90,n=3800,m=5000))
 shapiro.test(powerfuncl_r_wt_con(p=-0.80,n=3200,m=5000))
@@ -210,16 +188,3 @@ ggplot(df4,aes(sample=z,colour=factor(testtype)))+
     axis.title.x = element_text(size=11, face="bold"),
     axis.title.y = element_text(size=11, face="bold")
   )
-
-
-
-
-
-
-
-
-
-
-
-
-
