@@ -25,7 +25,7 @@ The project mainly aims to compare the **three different large sample testing pr
 This project is divided in several sections.There is a **main** branch.
 From this **main** branch, several branches, (say, sub-branches) have come out where each of the branch denotes a particular **section** of this project.
 From the name of the branch, you can easily understand that which section we are going to discuss in that branch.
-Within each of the sub-branch, there is a file named ${\color{cyan}details}$.
+Within each of the sub-branch, there is a file named ${\color{cyan}#details}$.
 ${\color{pink} After \space entering \space to \space a \space sub-branch, \space it \space is \space advised \space to \space read \space that \space}$ ${\color{cyan}details}$ ${\color{pink}file \space first \space in \space which \space all \space the \space files \space contained \space in \space that \space sub-branch \space is \space explained.}$
 
 
